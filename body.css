@@ -4,7 +4,8 @@ body {
     animation: gradient 5s ease infinite;
     
 	perspective: 340px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
 }
 
 @keyframes gradient {
