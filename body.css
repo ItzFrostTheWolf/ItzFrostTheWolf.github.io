@@ -7,7 +7,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     background-image: url('space.jpg');
-    filter: blur(20px);
+    backdrop-filter: blur(20px);
 }
 
 @keyframes gradient {
