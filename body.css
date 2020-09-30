@@ -1,23 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body {
-    background: linear-gradient(-45deg, rgb(40,40,40), rgb(0,0,0));
-	background-size: 100% 100%;
-    animation: gradient 5s ease infinite;
-    
-	perspective: 340px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
+	font-family: 'Roboto';
+	color: rgb(230, 230, 230);
+	text-shadow: 2px 2px gray;
+	
     background-image: url('space.jpg');
-    backdrop-filter: blur(20px);
+	animation: move 60s ease-in-out infinite;
+	
+	transition: 1s;
 }
 
-@keyframes gradient {
+body::-webkit-scrollbar {
+	width: 0.5em;
+  }
+   
+  body::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: rgb(31, 31, 31);
+  }
+   
+  body::-webkit-scrollbar-thumb {
+	background-color: purple;
+	outline: 3px solid black;
+  }
+
+img {
+	animation: imgMove 5s ease-in-out infinite;
+	width: 40%;
+	height: 65%;
+}
+
+@keyframes imgMove {
 	0% {
-		background-position: 0% 50%;
+		transform: scale(0.9);
 	}
 	50% {
-		background-position: 100% 50%;
+		transform: scale(1);
 	}
 	100% {
-		background-position: 0% 50%;
+		transform: scale(0.9);
+	}
+}
+
+.skewed {
+	position: absolute;
+	top: 75%;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 60%;
+	background: white;
+	z-index: 0;
+	transform: skewY(2deg);
+	transform-origin: top left;
+}
+
+.video {
+	transform: skewY(-2deg);
+	padding-top: 5%;
+}
+
+main {
+	display: block;
+    z-index: 5;
+	height: auto;
+	
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	
+	justify-content: center;
+	text-align: center;
+	align-self: center;
+}
+
+@keyframes move {
+	0% {
+		background-position: 0% 0%;
+	}
+	50% {
+		background-position: 100% 0%;
+	}
+	100% {
+		background-position: 0% 0%;
 	}
 }
